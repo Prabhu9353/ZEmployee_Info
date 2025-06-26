@@ -1,0 +1,191 @@
+@server=http://localhost:4004
+
+
+### CompanySet
+# @name CompanySet_GET
+GET {{server}}/odata/v4/employe-info/CompanySet
+
+
+
+### CompanySet
+# @name CompanySet_POST
+POST {{server}}/odata/v4/employe-info/CompanySet
+Content-Type: application/json
+
+{
+  "ID": "18195188-a82f-44f1-b029-b0526890c110",
+  "Name": "Name-Harish",
+  "Address": "Address-18195188",
+  "Revenue": 1155440.23,
+  "EmailID": "EmailID-18195188",
+  "Phone": "e-18195188",
+  "RegistrationDate": "2007-12-19",
+  "Industry": "Industry-18195188",
+  "Country": "Country-18195188",
+  "Employees": [
+    {
+      "ID": "19392860-7b59-46a0-bc7a-94aead5ecd82",
+      "Name": "Name-Harish",
+      "Department": "Department-19392860",
+      "EmailID": "EmailID-19392860",
+      "PhoneNo": "o-19392860",
+      "Salary": 15405227.43,
+      "DateofBirth": "2022-02-02",
+      "skill": {
+        "ID": "6165778d-44a0-4a26-af46-dd205b32f9e3"
+      }
+    },
+    {
+      "ID": "19392861-3a8f-4602-9c2f-5cda011b3c4f",
+      "Name": "Name-19392861",
+      "Department": "Department-19392861",
+      "EmailID": "EmailID-19392861",
+      "PhoneNo": "o-19392861",
+      "Salary": 14398916.32,
+      "DateofBirth": "2022-06-18",
+      "skill": {
+        "ID": "6165778d-44a0-4a26-af46-dd205b32f9e3"
+      }
+    }
+  ]
+}
+
+
+### CompanySet
+# @name CompanySet_PATCH
+PATCH {{server}}/odata/v4/employe-info/CompanySet/18195188-a82f-44f1-b029-b0526890c110
+Content-Type: application/json
+
+{
+  "ID": "18195188-a82f-44f1-b029-b0526890c110",
+  "Name": "Name-18195188",
+  "Address": "Address-18195188",
+  "Revenue": 1155440.23,
+  "EmailID": "EmailID-18195188",
+  "Phone": "e-18195188",
+  "RegistrationDate": "2007-12-19",
+  "Industry": "Industry-18195188",
+  "Country": "Country-18195188",
+  "Employees": [
+    {
+      "ID": "19392860-7b59-46a0-bc7a-94aead5ecd82",
+      "Name": "Name-19392860",
+      "Department": "Department-19392860",
+      "EmailID": "EmailID-19392860",
+      "PhoneNo": "o-19392860",
+      "Salary": 15405227.43,
+      "DateofBirth": "2022-02-02",
+      "skill": {
+        "ID": "6165778d-44a0-4a26-af46-dd205b32f9e3"
+      }
+    },
+    {
+      "ID": "19392861-3a8f-4602-9c2f-5cda011b3c4f",
+      "Name": "Name-19392861",
+      "Department": "Department-19392861",
+      "EmailID": "EmailID-19392861",
+      "PhoneNo": "o-19392861",
+      "Salary": 14398916.32,
+      "DateofBirth": "2022-06-18",
+      "skill": {
+        "ID": "6165778d-44a0-4a26-af46-dd205b32f9e3"
+      }
+    }
+  ]
+}
+
+
+### CompanySet
+# @name CompanySet_DELETE
+DELETE {{server}}/odata/v4/employe-info/CompanySet/18195188-a82f-44f1-b029-b0526890c110
+Content-Type: application/json
+
+
+### EmployeeSet
+# @name EmployeeSet_GET
+GET {{server}}/odata/v4/employe-info/EmployeeSet
+
+
+
+### EmployeeSet
+# @name EmployeeSet_POST
+POST {{server}}/odata/v4/employe-info/EmployeeSet
+Content-Type: application/json
+
+{
+  "ID": "19392860-7b59-46a0-bc7a-94aead5ecd82",
+  "Name": "Name-19392860",
+  "Department": "Department-19392860",
+  "EmailID": "EmailID-19392860",
+  "PhoneNo": "o-19392860",
+  "Salary": 15405227.43,
+  "DateofBirth": "2022-02-02",
+  "skill": {
+    "ID": "6165778d-44a0-4a26-af46-dd205b32f9e3"
+  }
+}
+
+
+### EmployeeSet
+# @name EmployeeSet_PATCH
+PATCH {{server}}/odata/v4/employe-info/EmployeeSet/19392860-7b59-46a0-bc7a-94aead5ecd82
+Content-Type: application/json
+
+{
+  "ID": "19392860-7b59-46a0-bc7a-94aead5ecd82",
+  "Name": "Name-19392860",
+  "Department": "Department-19392860",
+  "EmailID": "EmailID-19392860",
+  "PhoneNo": "o-19392860",
+  "Salary": 15405227.43,
+  "DateofBirth": "2022-02-02",
+  "skill": {
+    "ID": "6165778d-44a0-4a26-af46-dd205b32f9e3"
+  }
+}
+
+
+### EmployeeSet
+# @name EmployeeSet_DELETE
+DELETE {{server}}/odata/v4/employe-info/EmployeeSet/19392860-7b59-46a0-bc7a-94aead5ecd82
+Content-Type: application/json
+
+
+### SkillSet
+# @name SkillSet_GET
+GET {{server}}/odata/v4/employe-info/SkillSet
+
+
+
+### SkillSet
+# @name SkillSet_POST
+POST {{server}}/odata/v4/employe-info/SkillSet
+Content-Type: application/json
+
+{
+  "ID": "6165778d-44a0-4a26-af46-dd205b32f9e3",
+  "PrimarySkill": "PrimarySkill-6165778",
+  "SecondarySkill": "SecondarySkill-6165778",
+  "UpdatedSkill": "UpdatedSkill-6165778",
+  "Certification": "Certification-6165778"
+}
+
+
+### SkillSet
+# @name SkillSet_PATCH
+PATCH {{server}}/odata/v4/employe-info/SkillSet/6165778d-44a0-4a26-af46-dd205b32f9e3
+Content-Type: application/json
+
+{
+  "ID": "6165778d-44a0-4a26-af46-dd205b32f9e3",
+  "PrimarySkill": "PrimarySkill-6165778",
+  "SecondarySkill": "SecondarySkill-6165778",
+  "UpdatedSkill": "UpdatedSkill-6165778",
+  "Certification": "Certification-6165778"
+}
+
+
+### SkillSet
+# @name SkillSet_DELETE
+DELETE {{server}}/odata/v4/employe-info/SkillSet/6165778d-44a0-4a26-af46-dd205b32f9e3
+Content-Type: application/json

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/m/MessageToast","sap/ui/core/mvc/ControllerExtension"],function(e,t){"use strict";return{onShow:function(t){var n=this.editFlow.getView().byId("com.empinfo.employeedetailsapp::CompanySetList--fe::table::CompanySet::LineItem-innerTable");var o=n.getSelectedContexts();if(!o.length){e.show("No row selected.");return}o.map(function(e){var t=e.getObject();var n=t.Name;var o=t.Address;return t.companyName+" - "+t.companyID});e.show("Selected: "+o.join(", "))}}});
+//# sourceMappingURL=CompanyShow.js.map

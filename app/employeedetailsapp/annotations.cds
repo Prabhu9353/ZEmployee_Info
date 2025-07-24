@@ -1,0 +1,1 @@
+using EmployeInfo as service from '../../srv/EmpSRV';

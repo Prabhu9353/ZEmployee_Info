@@ -1,0 +1,16 @@
+{
+  "Component.js": 1750920751398,
+  "ext/controller/CompanyDownload.js": 1750945616770,
+  "ext/controller/CompanyUpload.js": 1750945456330,
+  "manifest.json": 1750988407737,
+  "i18n/i18n.properties": 1750920751402,
+  "ext/controller/CompanyUpload-dbg.js": 1750945456330,
+  "ext/controller/CompanyUpload.js.map": 1751990958395,
+  "ext/controller/CompanyDownload-dbg.js": 1750945616770,
+  "ext/controller/CompanyDownload.js.map": 1751990958395,
+  "Component-dbg.js": 1750920751398,
+  "Component.js.map": 1751990958395,
+  "Component-preload.js": 1751990958574,
+  "Component-preload.js.map": 1751990958574,
+  "index.html": 1750920751398
+}

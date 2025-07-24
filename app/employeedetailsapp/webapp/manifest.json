@@ -1,7 +1,7 @@
 {
   "_version": "1.65.0",
   "sap.app": {
-    "id": "com.empinfo.employeeinfoapp",
+    "id": "com.empinfo.employeedetailsapp",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.18.1",
-      "toolsId": "3322b726-5ec7-40cf-aca4-9582c0843339"
+      "toolsId": "5ff04f5b-a813-43cc-a7ae-aafcd4309387"
     },
     "dataSources": {
       "mainService": {
@@ -60,7 +60,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "com.empinfo.employeeinfoapp.i18n.i18n"
+          "bundleName": "com.empinfo.employeedetailsapp.i18n.i18n"
         }
       },
       "": {
@@ -113,26 +113,15 @@
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
-                    "type": "ResponsiveTable",
-                    "widthIncludingColumnHeader": true,
-                    "personalization": {
-                      "sort": false
-                    }
+                    "type": "ResponsiveTable"
                   },
                   "actions": {
-                    "CompanyUpload": {
-                      "press": "com.empinfo.employeeinfoapp.ext.controller.CompanyUpload.onUpload",
-                      "visible": false,
-                      "enabled": false,
-                      "requiresSelection": false,
-                      "text": "Upload"
-                    },
-                    "CompanyDownload": {
-                      "press": "com.empinfo.employeeinfoapp.ext.controller.CompanyDownload.onDownload",
-                      "visible": false,
+                    "CompanyShow": {
+                      "press": "com.empinfo.employeedetailsapp.ext.controller.CompanyShow.onShow",
+                      "visible": true,
                       "enabled": true,
                       "requiresSelection": false,
-                      "text": "Download"
+                      "text": "Show"
                     }
                   }
                 }

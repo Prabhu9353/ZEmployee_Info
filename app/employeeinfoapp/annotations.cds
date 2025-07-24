@@ -3,43 +3,7 @@ annotate service.CompanySet with @(
     UI.FieldGroup #GeneratedGroup : {
         $Type : 'UI.FieldGroupType',
         Data : [
-            {
-                $Type : 'UI.DataField',
-                Value : Name,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'Address',
-                Value : Address,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'Revenue',
-                Value : Revenue,
-            },
-            {
-                $Type : 'UI.DataField',
-                Value : EmailID,
-            },
-            {
-                $Type : 'UI.DataField',
-                Value : Phone,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'RegistrationDate',
-                Value : RegistrationDate,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'Industry',
-                Value : Industry,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'Country',
-                Value : Country,
-            },
+            
         ],
     },
     UI.Facets : [
@@ -48,6 +12,12 @@ annotate service.CompanySet with @(
             ID : 'GeneratedFacet1',
             Label : 'General Information',
             Target : '@UI.FieldGroup#GeneratedGroup',
+        },
+        {
+            $Type : 'UI.ReferenceFacet',
+            Label : 'Employee Details',
+            ID : 'EmployeeDetails',
+            Target : 'Employees/@UI.LineItem#EmployeeDetails',
         },
     ],
     UI.LineItem : [
@@ -79,6 +49,76 @@ annotate service.CompanySet with @(
         Name,
         Address,
     ],
+    UI.HeaderFacets : [
+        {
+            $Type : 'UI.ReferenceFacet',
+            Label : 'Employee',
+            ID : 'Employee',
+            Target : '@UI.FieldGroup#Employee1',
+        },
+    ],
+    UI.FieldGroup #Employee : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type : 'UI.DataField',
+                Value : ID,
+                Label : 'ID',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : EmailID,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : Address,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : Name,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : Phone,
+            },
+        ],
+    },
+    UI.FieldGroup #Employee1 : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type : 'UI.DataField',
+                Value : Address,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : Country,
+                Label : 'Country',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : EmailID,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : ID,
+                Label : 'ID',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : Industry,
+                Label : 'Industry',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : Name,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : Phone,
+            },
+        ],
+    },
 );
 
 annotate service.CompanySet with {
@@ -119,4 +159,49 @@ annotate service.CompanySet with {
         Common.ValueListWithFixedValues : false,
         )
 };
+
+annotate service.EmployeeSet with @(
+    UI.LineItem #EmployeeDetails : [
+        {
+            $Type : 'UI.DataField',
+            Value : ID,
+            Label : 'ID',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : Name,
+            Label : 'Name',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : PhoneNo,
+            Label : 'PhoneNo',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : EmailID,
+            Label : 'EmailID',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : Salary,
+            Label : 'Salary',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : Employer.Industry,
+            Label : 'Industry',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : Employer.Employees.DateofBirth,
+            Label : 'DateofBirth',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : Employer.Employees.Department,
+            Label : 'Department',
+        },
+    ]
+);
 
